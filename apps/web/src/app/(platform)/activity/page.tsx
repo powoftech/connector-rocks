@@ -1,3 +1,3 @@
 export default function ActivityPage() {
-    return <></>
+  return <></>
 }

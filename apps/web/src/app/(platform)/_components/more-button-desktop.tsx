@@ -12,7 +12,7 @@ import { useTheme } from 'next-themes'
 import Link from 'next/link'
 import { useState } from 'react'
 
-export default function MoreButton() {
+export default function MoreButtonDesktop() {
   const [open, setOpen] = useState(false)
   const { theme, setTheme } = useTheme()
   const [activeMenu, setActiveMenu] = useState('main')
@@ -32,7 +32,7 @@ export default function MoreButton() {
           <button className="relative flex items-center justify-center">
             <div className="flex h-[54px] w-[54px] scale-100 items-center justify-center transition-transform duration-200 [transition-timing-function:ease-in-out] group-active:scale-90">
               <ThreeBarsIcon
-                size={24}
+                size={28}
                 className="fill-barcelona-navigation-icon group-hover:fill-barcelona-primary-icon flex-shrink-0 transition-colors duration-200"
               />
             </div>
@@ -44,9 +44,9 @@ export default function MoreButton() {
         <DropdownMenu.Content
           avoidCollisions
           // side={"top"}
-          sideOffset={-48}
+          sideOffset={-54}
           align={'start'}
-          alignOffset={7}
+          alignOffset={0}
           className="bg-barcelona-elevated-background data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 z-10 min-h-fit w-fit min-w-[240px] origin-bottom-left overflow-hidden rounded-[16px] shadow-[0_10.5px_21px_var(--barcelona-box-shadow-08)] transition-all"
           style={{
             outline: '0.5px solid var(--barcelona-primary-column-outline)',
@@ -68,7 +68,7 @@ export default function MoreButton() {
                     </span>
                     <div className="ml-[8px] flex items-center">
                       <ChevronRightIcon
-                        size={16}
+                        size={20}
                         className="fill-barcelona-secondary-icon"
                       />
                     </div>
@@ -115,20 +115,20 @@ export default function MoreButton() {
               <DropdownMenu.Group className="w-[320px]">
                 <DropdownMenu.Item
                   onSelect={(event) => event.preventDefault()}
-                  className="flex flex-row items-center justify-between"
+                  className="flex flex-row items-center justify-between focus-visible:outline-none"
                 >
                   <button
                     onClick={() => {
                       setActiveMenu('main')
                     }}
-                    className="relative inline-flex flex-shrink-0 cursor-pointer touch-manipulation select-none items-stretch rounded-tl-[16px] p-[16px]"
+                    className="relative inline-flex flex-shrink-0 cursor-pointer touch-manipulation select-none items-stretch rounded-tl-[16px] p-[14px]"
                   >
                     <ArrowLeftIcon
-                      size={16}
+                      size={20}
                       className="fill-barcelona-primary-icon flex-shrink-0"
                     />
                   </button>
-                  <span className="text-system-15-font-size relative min-w-0 max-w-full flex-grow overflow-visible whitespace-pre-line text-center font-semibold leading-[calc(1.4*1em)]">
+                  <span className="text-system-15-font-size relative min-w-0 max-w-full flex-grow select-none overflow-visible whitespace-pre-line text-center font-semibold leading-[calc(1.4*1em)]">
                     Appearance
                   </span>
                   <div className="w-[48px]" />
@@ -142,41 +142,41 @@ export default function MoreButton() {
                     <DropdownMenu.RadioItem
                       onSelect={(event) => event.preventDefault()}
                       value="light"
-                      className="group relative flex min-w-0 flex-grow basis-0 cursor-pointer touch-manipulation select-none flex-col items-center justify-center px-[18px]"
+                      className="group relative flex min-w-0 flex-grow basis-0 cursor-pointer touch-manipulation select-none flex-col items-center justify-center px-[18px] focus-visible:outline-none"
                     >
                       <DropdownMenu.ItemIndicator className="animate-theme-fade absolute inset-0 z-10 flex h-full w-full items-center justify-center">
                         <div className="border-barcelona-primary-outline bg-barcelona-tertiary-background absolute inset-0 rounded-[12px] border-[0.5px]"></div>
                         <SunIcon
-                          size={18}
+                          size={20}
                           className="fill-barcelona-primary-icon z-10"
                         />
                       </DropdownMenu.ItemIndicator>
                       <SunIcon
-                        size={18}
+                        size={20}
                         className="fill-barcelona-secondary-icon group-data-[state=checked]:hidden"
                       />
                     </DropdownMenu.RadioItem>
                     <DropdownMenu.RadioItem
                       onSelect={(event) => event.preventDefault()}
                       value="dark"
-                      className="group relative flex min-w-0 flex-grow basis-0 cursor-pointer touch-manipulation select-none flex-col items-center justify-center px-[18px]"
+                      className="group relative flex min-w-0 flex-grow basis-0 cursor-pointer touch-manipulation select-none flex-col items-center justify-center px-[18px] focus-visible:outline-none"
                     >
                       <DropdownMenu.ItemIndicator className="animate-theme-fade absolute inset-0 z-10 flex h-full w-full items-center justify-center">
                         <div className="border-barcelona-primary-outline bg-barcelona-tertiary-background absolute inset-0 rounded-[12px] border-[0.5px]"></div>
                         <MoonIcon
-                          size={18}
+                          size={20}
                           className="fill-barcelona-primary-icon z-10"
                         />
                       </DropdownMenu.ItemIndicator>
                       <MoonIcon
-                        size={18}
+                        size={20}
                         className="fill-barcelona-secondary-icon group-data-[state=checked]:hidden"
                       />
                     </DropdownMenu.RadioItem>
                     <DropdownMenu.RadioItem
                       onSelect={(event) => event.preventDefault()}
                       value="system"
-                      className="group relative flex min-w-0 flex-grow basis-0 cursor-pointer touch-manipulation select-none flex-col items-center justify-center px-[18px]"
+                      className="group relative flex min-w-0 flex-grow basis-0 cursor-pointer touch-manipulation select-none flex-col items-center justify-center px-[18px] focus-visible:outline-none"
                     >
                       <DropdownMenu.ItemIndicator className="animate-theme-fade absolute inset-0 z-10 flex h-full w-full items-center justify-center">
                         <div className="border-barcelona-primary-outline bg-barcelona-tertiary-background absolute inset-0 rounded-[12px] border-[0.5px]"></div>
