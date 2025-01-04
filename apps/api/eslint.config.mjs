@@ -36,7 +36,7 @@ export default [
 
       parserOptions: {
         project: 'tsconfig.json',
-        tsconfigRootDir: 'D:\\.dev\\.repo\\connector\\apps\\api',
+        tsconfigRootDir: path.resolve(__dirname),
       },
     },
 
